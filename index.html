@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美东 13 天博物馆深度之旅 · 旅行手册</title>
+<meta name="description" content="纽约 · 波士顿 · 华盛顿 13 天博物馆深度行程旅行手册">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee;
+  --bg-soft:#efeae0;
+  --card:#ffffff;
+  --card-2:#faf8f4;
+  --text:#1c1e22;
+  --text-2:#5b626e;
+  --text-3:#8a909c;
+  --line:#e6dfd2;
+  --line-2:#ddd5c6;
+  --brand:#0f766e;
+  --brand-deep:#0b5f59;
+  --accent:#d97706;
+  --gold:#c2a05a;
+  --shadow:0 2px 14px rgba(60,50,30,.07);
+  --shadow-lg:0 12px 40px rgba(60,50,30,.12);
+  --nyc:#d8562f;
+  --bos:#2f6fbf;
+  --dc:#b23a48;
+  --transit:#6b7280;
+  --chip-bg:#f0ece2;
+}
+html[data-theme="dark"]{
+  --bg:#12151a;
+  --bg-soft:#181c23;
+  --card:#1c2027;
+  --card-2:#21262e;
+  --text:#e7e9ee;
+  --text-2:#aeb5c0;
+  --text-3:#7c8490;
+  --line:#2a303a;
+  --line-2:#343c48;
+  --brand:#2aa69a;
+  --brand-deep:#3db4a8;
+  --accent:#e8a23a;
+  --gold:#c8ab6e;
+  --shadow:0 2px 14px rgba(0,0,0,.35);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.5);
+  --nyc:#e87a53;
+  --bos:#5b95e8;
+  --dc:#d56774;
+  --transit:#9aa3af;
+  --chip-bg:#262c35;
+}
+html[data-theme="auto"]{ color-scheme: light dark; }
+html[data-theme="light"]{ color-scheme: light; }
+html[data-theme="dark"]{ color-scheme: dark; }
+@media (prefers-color-scheme: dark){
+  html[data-theme="auto"]{
+    --bg:#12151a; --bg-soft:#181c23; --card:#1c2027; --card-2:#21262e;
+    --text:#e7e9ee; --text-2:#aeb5c0; --text-3:#7c8490;
+    --line:#2a303a; --line-2:#343c48; --brand:#2aa69a; --brand-deep:#3db4a8;
+    --accent:#e8a23a; --gold:#c8ab6e;
+    --shadow:0 2px 14px rgba(0,0,0,.35); --shadow-lg:0 12px 40px rgba(0,0,0,.5);
+    --nyc:#e87a53; --bos:#5b95e8; --dc:#d56774; --transit:#9aa3af; --chip-bg:#262c35;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans SC","Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7;
+  -webkit-font-smoothing:antialiased; transition:background .3s,color .3s;
+}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Noto Serif SC",serif}
+
+/* ===== Nav ===== */
+.nav{
+  position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.brand .dot{width:10px;height:10px;border-radius:3px;background:linear-gradient(135deg,var(--brand),var(--accent))}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{padding:7px 12px;border-radius:9px;font-size:14px;color:var(--text-2);font-weight:500;white-space:nowrap}
+.nav-links a:hover{background:var(--chip-bg);color:var(--text)}
+.nav-links a.hot{color:var(--brand);font-weight:700}
+.theme-btn{
+  width:38px;height:38px;border:1px solid var(--line);border-radius:10px;cursor:pointer;
+  display:grid;place-items:center;background:var(--card);color:var(--text-2);transition:.2s;
+}
+.theme-btn:hover{color:var(--brand);border-color:var(--brand)}
+.nav-links .menu-toggle{display:none}
+@media(max-width:760px){
+  .nav-links a{display:none}
+  .nav-links .menu-toggle{display:inline-grid;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;cursor:pointer;place-items:center;background:var(--card);color:var(--text-2)}
+}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;overflow:hidden;padding:72px 0 56px;
+  background:
+    radial-gradient(1100px 500px at 15% -10%, color-mix(in srgb,var(--brand) 16%,transparent), transparent 60%),
+    radial-gradient(900px 420px at 100% 0%, color-mix(in srgb,var(--accent) 14%,transparent), transparent 55%),
+    var(--bg);
+}
+.hero .route-line{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--text-2);margin-bottom:22px;font-weight:600}
+.hero .route-line .seg{display:inline-flex;align-items:center;gap:8px}
+.hero .route-line .arrow{color:var(--text-3)}
+.hero h1{font-size:clamp(32px,6vw,56px);font-weight:900;letter-spacing:-1px;line-height:1.12;margin-bottom:14px}
+.hero h1 .grad{background:linear-gradient(100deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(15px,2.4vw,18px);color:var(--text-2);max-width:640px;margin-bottom:28px}
+.countdown{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.cd-box{
+  min-width:78px;padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);
+  box-shadow:var(--shadow);text-align:center;
+}
+.cd-box .num{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1;color:var(--brand)}
+.cd-box .lbl{font-size:12px;color:var(--text-3);margin-top:6px}
+.cd-hint{font-size:13px;color:var(--text-3);margin-top:-18px;margin-bottom:30px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:13px;font-weight:600;color:var(--text-2)}
+.pill .k{color:var(--brand)}
+
+/* ===== Sections ===== */
+section{padding:56px 0}
+.sec-head{margin-bottom:28px}
+.sec-head .eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--brand);font-weight:700;margin-bottom:6px}
+.sec-head h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;letter-spacing:-.5px}
+.sec-head p{color:var(--text-2);margin-top:6px;max-width:680px}
+
+/* Stat cards */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.stat .v{font-size:30px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--text-2);margin-top:4px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Route overview */
+.route{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.city-card{
+  position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;
+  box-shadow:var(--shadow);overflow:hidden;
+}
+.city-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
+.city-card .tag{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--c);text-transform:uppercase}
+.city-card h4{font-size:17px;margin:6px 0 2px}
+.city-card .dates{font-size:12.5px;color:var(--text-3)}
+.city-card .desc{font-size:12.5px;color:var(--text-2);margin-top:8px}
+@media(max-width:760px){.route{grid-template-columns:repeat(2,1fr)}}
+
+/* Hotels */
+.hotels{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.hotel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.hotel .h-name{font-weight:700;font-size:15px}
+.hotel .h-sub{font-size:12.5px;color:var(--text-2);margin-top:3px}
+.hotel .h-dates{font-size:12px;color:var(--brand);font-weight:600;margin-top:6px}
+.hotel .pin{flex:none;color:var(--text-3);transition:.2s}
+.hotel .pin:hover{color:var(--brand)}
+@media(max-width:760px){.hotels{grid-template-columns:1fr}}
+
+/* Transport */
+.trans-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.trans{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow);display:flex;gap:14px}
+.trans .icon{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--chip-bg);color:var(--brand)}
+.trans .t-route{font-weight:700;font-size:15px}
+.trans .t-time{font-size:13px;color:var(--text-2);margin-top:2px}
+.trans .t-note{font-size:12px;color:var(--text-3);margin-top:4px}
+@media(max-width:760px){.trans-grid{grid-template-columns:1fr}}
+
+/* Day filter chips */
+.dayfilters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.df{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:13px;font-weight:600;color:var(--text-2);cursor:pointer;transition:.18s}
+.df:hover{border-color:var(--brand);color:var(--brand)}
+.df.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+
+/* Day cards */
+.day{background:var(--card);border:1px solid var(--line);border-radius:20px;margin-bottom:22px;box-shadow:var(--shadow);overflow:hidden}
+.day.dim{display:none}
+.day-head{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--card-2)}
+.day-num{flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--c);color:#fff;font-weight:800;font-family:"Inter" }
+.day-num small{font-size:9px;display:block;opacity:.9;letter-spacing:.5px}
+.day-num .n{font-size:18px;line-height:1}
+.day-city{font-size:15px;font-weight:700}
+.day-date{font-size:12.5px;color:var(--text-3)}
+.day-head .spacer{flex:1}
+.day-tag{font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c)}
+
+/* timeline */
+.timeline{list-style:none;padding:8px 20px 14px}
+.ev{position:relative;display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line-2)}
+.ev:last-child{border-bottom:none}
+.ev-time{flex:none;width:86px;font-size:12.5px;color:var(--text-2);font-weight:600;font-variant-numeric:tabular-nums;padding-top:2px}
+.ev-dot{flex:none;width:12px;margin-top:7px;position:relative}
+.ev-dot::before{content:"";position:absolute;left:5px;top:2px;width:9px;height:9px;border-radius:50%;background:var(--c)}
+.ev-dot::after{content:"";position:absolute;left:9px;top:18px;bottom:-14px;width:2px;background:var(--line-2)}
+.ev:last-child .ev-dot::after{display:none}
+.ev-body{flex:1;min-width:0}
+.ev-title{font-weight:700;font-size:15px}
+.ev-title .en{font-weight:600;font-size:12.5px;color:var(--text-3);margin-left:6px}
+.ev-note{font-size:13px;color:var(--text-2);margin-top:4px}
+.ev-trans{font-size:12px;color:var(--text-3);margin-top:4px;display:flex;gap:6px;align-items:center}
+.ev-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:11px;font-weight:600;padding:3px 9px;border-radius:7px;background:var(--chip-bg);color:var(--text-2)}
+.chip.free{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--brand)}
+.chip.ticket{background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent)}
+.chip.reserve{background:color-mix(in srgb,var(--dc) 14%,transparent);color:var(--dc)}
+.chip.booked{background:color-mix(in srgb,var(--bos) 14%,transparent);color:var(--bos)}
+.ev-nav{flex:none;align-self:flex-start;margin-top:2px;width:34px;height:34px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;color:var(--text-3);transition:.18s;background:transparent;cursor:pointer}
+.ev-nav:hover{color:var(--brand);border-color:var(--brand);background:color-mix(in srgb,var(--brand) 8%,transparent)}
+@media(max-width:520px){.ev-time{width:64px;font-size:11.5px}.ev-title{font-size:14px}}
+
+/* Todo */
+.todo-wrap{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:8px 20px 12px;box-shadow:var(--shadow)}
+.todo-grp{padding:14px 0;border-bottom:1px solid var(--line)}
+.todo-grp:last-child{border-bottom:none}
+.todo-grp h4{font-size:14px;color:var(--brand);margin-bottom:8px}
+.todo{display:flex;align-items:flex-start;gap:12px;padding:8px 4px;cursor:pointer}
+.todo input{display:none}
+.todo .box{flex:none;width:20px;height:20px;border-radius:6px;border:2px solid var(--line-2);margin-top:2px;position:relative;transition:.15s}
+.todo input:checked + .box{background:var(--brand);border-color:var(--brand)}
+.todo input:checked + .box::after{content:"";position:absolute;left:5px;top:2px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.todo .t-text{font-size:14px;color:var(--text)}
+.todo .t-sub{font-size:12px;color:var(--text-3)}
+.todo input:checked ~ .t-text{text-decoration:line-through;color:var(--text-3)}
+.todo-progress{font-size:12.5px;color:var(--text-3);text-align:right;padding:10px 4px}
+
+/* Tips */
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.tip .t-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);margin-bottom:12px}
+.tip h4{font-size:15px;margin-bottom:6px}
+.tip p{font-size:13px;color:var(--text-2)}
+.tip ul{list-style:none;margin-top:6px}
+.tip li{font-size:13px;color:var(--text-2);padding:3px 0;padding-left:16px;position:relative}
+.tip li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+@media(max-width:760px){.tips{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--text-3);font-size:12.5px}
+footer .f-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.backtop{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:12px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-lg);display:grid;place-items:center;color:var(--text-2);cursor:pointer;z-index:40;transition:.2s}
+.backtop:hover{color:var(--brand)}
+@media (prefers-reduced-motion: no-preference){ .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s} .reveal.in{opacity:1;transform:none} }
+
+/* ===== 票券截图（文本超链接形态） ===== */
+.ticket{display:inline-flex;align-items:center;gap:6px;margin:6px 10px 0 0;padding:0;border:none;background:none;cursor:pointer;font:inherit;color:var(--brand);text-decoration:underline;text-underline-offset:2px}
+.ticket:hover{color:var(--accent)}
+.ticket .tk-thumb{display:none}
+.ticket .tk-body{min-width:0}
+.ticket .tk-label{font-size:13px;font-weight:600;line-height:1.5;display:inline}
+.ticket .tk-label svg{display:none}
+.ticket .tk-sub{display:none}
+
+/* ===== 弹窗 lightbox ===== */
+.lightbox{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(9,11,15,.8);backdrop-filter:blur(7px);opacity:0;pointer-events:none;transition:opacity .22s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox .lb-figure{position:relative;margin:0;max-width:min(94vw,560px);max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lightbox .lb-img{max-width:100%;max-height:76vh;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.5);background:#fff}
+.lightbox .lb-cap{color:#f2f4f7;font-size:13.5px;font-weight:600;text-align:center;line-height:1.5}
+.lightbox .lb-hint{color:#aeb5c0;font-size:12px}
+.lb-close{position:absolute;top:-6px;right:-6px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:18px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:.18s;z-index:2}
+.lb-close:hover{background:var(--accent)}
+@media(max-width:760px){ .ticket{margin-top:8px} }
+
+/* ===== 目录侧栏 ===== */
+.nav-left{display:flex;align-items:center;gap:10px}
+.toc-toggle{width:38px;height:38px;flex:0 0 auto;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text-2);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.toc-toggle:hover{color:var(--brand);border-color:var(--brand)}
+.toc-scrim{position:fixed;inset:0;background:rgba(9,11,15,.5);backdrop-filter:blur(2px);z-index:95;opacity:0;pointer-events:none;transition:opacity .25s}
+.toc-scrim.show{opacity:1;pointer-events:auto}
+.toc{position:fixed;top:0;left:0;bottom:0;width:min(82vw,320px);background:var(--card);border-right:1px solid var(--line);z-index:100;display:flex;flex-direction:column;transform:translateX(-100%);transition:transform .28s cubic-bezier(.4,0,.2,1);box-shadow:var(--shadow-lg)}
+.toc.open{transform:translateX(0)}
+.toc-head{display:flex;align-items:center;justify-content:space-between;padding:18px 18px 14px;border-bottom:1px solid var(--line)}
+.toc-head .serif{font-size:17px;font-weight:800}
+.toc-close{width:32px;height:32px;border:none;background:var(--chip-bg);color:var(--text-2);border-radius:9px;cursor:pointer;display:grid;place-items:center;font-size:15px}
+.toc-close:hover{color:var(--brand)}
+.toc-list{flex:1;overflow-y:auto;padding:10px}
+.toc-item{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:11px;color:var(--text-2);transition:.15s}
+.toc-item:hover{background:var(--chip-bg);color:var(--text)}
+.toc-item .toc-num{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff;background:var(--toc-c,var(--brand))}
+.toc-item .toc-main{min-width:0;display:flex;flex-direction:column;line-height:1.3}
+.toc-item .toc-city{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc-item .toc-date{font-size:11.5px;color:var(--text-3)}
+.toc-foot{padding:12px 18px;font-size:11.5px;color:var(--text-3);border-top:1px solid var(--line)}
+.day{scroll-margin-top:76px}
+
+/* ===== 今日待办 ===== */
+.today-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.today-item{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.today-item .td-num{flex:0 0 auto;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--brand),var(--accent))}
+.today-item .td-title{font-size:14.5px;font-weight:700;line-height:1.4}
+.today-item .td-desc{font-size:12.5px;color:var(--text-2);margin-top:3px;line-height:1.55}
+@media(max-width:760px){.today-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="nav-left">
+      <button class="toc-toggle" id="tocToggle" type="button" aria-label="打开目录" aria-expanded="false" title="目录">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="brand"><span class="dot"></span><span class="serif">美东 13 天博物馆深度之旅</span></div>
+    </div>
+    <div class="nav-links">
+      <a href="#countdown" class="hot">倒计时</a>
+      <a href="#overview">概览</a>
+      <a href="#transport">交通</a>
+      <a href="#schedule">每日行程</a>
+      <a href="#todo">待办</a>
+      <a href="#tips">小贴士</a>
+      <button class="theme-btn" id="themeBtn" aria-label="切换日夜模式" title="切换日夜模式">
+        <svg id="iconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg id="iconMoon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- 目录侧栏 -->
+<div class="toc-scrim" id="tocScrim"></div>
+<aside class="toc" id="tocSidebar" aria-label="行程目录" aria-hidden="true">
+  <div class="toc-head">
+    <span class="serif">行程目录</span>
+    <button class="toc-close" id="tocClose" type="button" aria-label="关闭目录">✕</button>
+  </div>
+  <nav class="toc-list" id="tocList"></nav>
+  <div class="toc-foot">点击日期可直达当天行程</div>
+</aside>
+
+<!-- Hero -->
+<header class="hero" id="countdown">
+  <div class="wrap">
+    <div class="route-line">
+      <span class="seg" style="color:var(--nyc)">● 纽约</span><span class="arrow">→</span>
+      <span class="seg" style="color:var(--bos)">● 波士顿</span><span class="arrow">→</span>
+      <span class="seg" style="color:var(--dc)">● 华盛顿</span><span class="arrow">→</span>
+      <span class="seg" style="color:var(--nyc)">● 纽约返程</span>
+    </div>
+    <h1 class="serif">美东 <span class="grad">13 天</span><br>博物馆深度之旅</h1>
+    <p class="sub">纽约 · 波士顿 · 华盛顿三城连走，从大都会到国家美术馆，一条以博物馆为主线的深度行程手册。手机、平板、电脑打开即用，无需登录。</p>
+    <div class="countdown">
+      <div class="cd-box"><div class="num" id="cd-days">—</div><div class="lbl">天</div></div>
+      <div class="cd-box"><div class="num" id="cd-hours">—</div><div class="lbl">时</div></div>
+      <div class="cd-box"><div class="num" id="cd-mins">—</div><div class="lbl">分</div></div>
+      <div class="cd-box"><div class="num" id="cd-secs">—</div><div class="lbl">秒</div></div>
+    </div>
+    <div class="cd-hint" id="cd-hint">距 2026-09-25 11:40 上海浦东起飞</div>
+    <div class="pills">
+      <span class="pill"><span class="k">13</span> 天 12 晚</span>
+      <span class="pill"><span class="k">3</span> 城深度</span>
+      <span class="pill"><span class="k">12</span> 家博物馆/场馆</span>
+      <span class="pill">Amtrak ×2 · 达美 ×1 · 自驾 ×1</span>
+    </div>
+  </div>
+</header>
+
+<!-- 今日待办 -->
+<section id="today" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Today · 今日待办</div>
+      <h2 class="serif">今日重点待办</h2>
+      <p>出发前先把这几件「限时限量」的事办了，避免到现场扑空。</p>
+    </div>
+    <div class="today-grid">
+      <div class="today-item"><span class="td-num">01</span><div class="td-body"><div class="td-title">抢 9/11 博物馆免费票</div><div class="td-desc">9/28（周一）美东 7:00 开抢，限量先到先得；抢不到按 Plan B 提前入场</div></div></div>
+      <div class="today-item"><span class="td-num">02</span><div class="td-body"><div class="td-title">抢加德纳博物馆周四免费票</div><div class="td-desc">10/1 参观，免费票提前 2 天（9/29）开放</div></div></div>
+      <div class="today-item"><span class="td-num">03</span><div class="td-body"><div class="td-title">预约国会图书馆 Timed-Entry</div><div class="td-desc">10/3（周六）16:00 入场，可提前 30 天预约</div></div></div>
+      <div class="today-item"><span class="td-num">04</span><div class="td-body"><div class="td-title">预约航空航天博物馆 Timed-Entry</div><div class="td-desc">10/4（周日）10:00 入场，免费但需预约</div></div></div>
+      <div class="today-item"><span class="td-num">05</span><div class="td-body"><div class="td-title">购买大都会 / MoMA / AMNH / MFA 门票</div><div class="td-desc">重要场馆建议提前官网购票，节省现场排队</div></div></div>
+      <div class="today-item"><span class="td-num">06</span><div class="td-body"><div class="td-title">确认机票与 Amtrak 车票凭证</div><div class="td-desc">国际往返 + 达美 DL5592 + NR190 / Acela，电子票截图已存入对应日期</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Overview · 行程概览</div>
+      <h2 class="serif">一次三城的博物馆巡礼</h2>
+      <p>以博物馆为骨架，穿插街区散步与黄昏时刻，节奏松紧有度。四家酒店的落脚点与每一程城际交通如下。</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="v">4</div><div class="k">座落脚城市</div></div>
+      <div class="stat"><div class="v">11</div><div class="k">晚酒店住宿</div></div>
+      <div class="stat"><div class="v">5</div><div class="k">段城际/大交通</div></div>
+      <div class="stat"><div class="v">3</div><div class="k">个核心都市圈</div></div>
+    </div>
+
+    <div class="route">
+      <div class="city-card" style="--c:var(--nyc)">
+        <div class="tag">纽约</div><h4>New York</h4><div class="dates">9.25 – 9.30</div>
+        <div class="desc">大都会、MoMA、9/11 博物馆、自然历史博物馆 + SoHo 购物。</div>
+      </div>
+      <div class="city-card" style="--c:var(--bos)">
+        <div class="tag">波士顿</div><h4>Boston</h4><div class="dates">9.30 – 10.3</div>
+        <div class="desc">美术馆 MFA、加德纳、公共图书馆，康科德周边自驾（瓦尔登湖）。</div>
+      </div>
+      <div class="city-card" style="--c:var(--dc)">
+        <div class="tag">华盛顿</div><h4>Washington D.C.</h4><div class="dates">10.3 – 10.5</div>
+        <div class="desc">航空航天、自然历史、国家美术馆 + 国家广场纪念碑群。</div>
+      </div>
+      <div class="city-card" style="--c:var(--transit)">
+        <div class="tag">返程</div><h4>纽约 JFK</h4><div class="dates">10.5 – 10.8</div>
+        <div class="desc">Acela 返纽约，JFK 跨洋回国，10.8 抵沪。</div>
+      </div>
+    </div>
+
+    <h3 style="margin:30px 0 6px;font-size:18px" class="serif">住宿安排</h3>
+    <p style="font-size:13px;color:var(--text-3)">点右侧图钉可直接在地图查看酒店位置。</p>
+    <div class="hotels">
+      <div class="hotel">
+        <div><div class="h-name">Millennium Hilton New York One UN Plaza</div>
+        <div class="h-sub">纽约联合国广场千禧希尔顿酒店</div><div class="h-dates">9.25 入住 · 9.30 退房</div></div>
+        <a class="pin" data-nav="Millennium Hilton New York One UN Plaza, Manhattan" title="地图查看">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </div>
+      <div class="hotel">
+        <div><div class="h-name">Cambria Hotels Boston Downtown – Seaport</div>
+        <div class="h-sub">波士顿市中心海港坎布里亚酒店</div><div class="h-dates">9.30 入住 · 10.3 退房</div></div>
+        <a class="pin" data-nav="Cambria Hotels Boston Downtown Seaport" title="地图查看">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </div>
+      <div class="hotel">
+        <div><div class="h-name">Courtyard Washington Downtown/Convention Center</div>
+        <div class="h-sub">华盛顿市中心会议中心万怡酒店</div><div class="h-dates">10.3 入住 · 10.5 退房</div></div>
+        <a class="pin" data-nav="Courtyard Washington Downtown Convention Center" title="地图查看">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </div>
+      <div class="hotel">
+        <div><div class="h-name">La Quinta Inn & Suites by Wyndham Jamaica NYC/JFK</div>
+        <div class="h-sub">纽约 JFK 机场温德姆拉昆塔（回国前一晚）</div><div class="h-dates">10.5 入住 · 10.6 退房</div></div>
+        <a class="pin" data-nav="La Quinta Inn Suites Jamaica JFK Airport" title="地图查看">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transport -->
+<section id="transport" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Transport · 交通信息</div>
+      <h2 class="serif">城际与大交通</h2>
+      <p>机票、火车与自驾均已确定。行程中的本地交通以地铁/步行为主，详见每日条目。</p>
+    </div>
+    <div class="trans-grid">
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-1 .1-1.4.5L2.6 7.5c-.4.4-.4 1 0 1.4l7 4.4-2.7 2.7-2.5-.7c-.5-.1-1 .1-1.4.4l-.9.9c-.4.4-.4 1 0 1.4l3 3c.4.4 1 .4 1.4 0l.9-.9c.3-.4.5-.9.4-1.4l-.7-2.5 2.7-2.7 4.4 7c.4.4 1 .4 1.4 0l1.3-.9c.4-.4.6-.9.5-1.4z"/></svg></div>
+        <div><div class="t-route">上海浦东 ⇄ 纽约 JFK（国际往返）</div>
+        <div class="t-time">去 9.25 11:40–23:00 · 回 10.6 11:45 起飞</div>
+        <div class="t-note">飞行约 14 小时 20 分；回程 10.8 约 15:00 抵沪。</div></div>
+      </div>
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16M8 21l-2-4M16 21l2-4"/><circle cx="8" cy="14" r=".5"/><circle cx="16" cy="14" r=".5"/></svg></div>
+        <div><div class="t-route">Amtrak NR190 · 纽约 → 波士顿</div>
+        <div class="t-time">9.30 07:41 – 11:30（约 3h49m）</div>
+        <div class="t-note">Moynihan Train Hall 发车，建议提前 30 分钟到站。</div></div>
+      </div>
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-1 .1-1.4.5L2.6 7.5c-.4.4-.4 1 0 1.4l7 4.4-2.7 2.7-2.5-.7c-.5-.1-1 .1-1.4.4l-.9.9c-.4.4-.4 1 0 1.4l3 3c.4.4 1 .4 1.4 0l.9-.9c.3-.4.5-.9.4-1.4l-.7-2.5 2.7-2.7 4.4 7c.4.4 1 .4 1.4 0l1.3-.9c.4-.4.6-.9.5-1.4z"/></svg></div>
+        <div><div class="t-route">达美航空 DL5592 · 波士顿 → 华盛顿 DCA</div>
+        <div class="t-time">10.3 10:20 – 13:00</div>
+        <div class="t-note">建议提前约 2 小时到 BOS，落地 DCA 搭地铁进城。</div></div>
+      </div>
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M3 12h7M3 16h4"/><circle cx="17" cy="12" r="4"/><path d="M20 15v4a2 2 0 0 1-2 2h-1"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+        <div><div class="t-route">Amtrak Acela 2162 · 华盛顿 → 纽约</div>
+        <div class="t-time">10.5 16:20 – 19:20（约 3h，Business）</div>
+        <div class="t-note">Union Station 发车，返纽约 Moynihan Train Hall。</div></div>
+      </div>
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h-2v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M9 17h6"/></svg></div>
+        <div><div class="t-route">自驾 · 波士顿 ⇄ 康科德（当日）</div>
+        <div class="t-time">10.2 08:00 取车 · 15:30 返程还车</div>
+        <div class="t-note">瓦尔登湖、康科德博物馆、北桥；MA-2/I-95 约 40 分钟。</div></div>
+      </div>
+      <div class="trans">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="5" cy="5" r="1.5"/><circle cx="19" cy="5" r="1.5"/><circle cx="5" cy="19" r="1.5"/><circle cx="19" cy="19" r="1.5"/></svg></div>
+        <div><div class="t-route">市内交通 · 地铁 / 步行 / 网约车</div>
+        <div class="t-time">纽约 MTA · 波士顿 MBTA · 华盛顿 WMATA</div>
+        <div class="t-note">美国用 Google Maps 导航最稳，点击每日「图钉」即可跳转。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Itinerary · 每日行程</div>
+      <h2 class="serif">13 天每日时间表</h2>
+      <p>按城市分组，点击右上角图钉直达地图导航。所标注时间均为当地当地时间。</p>
+    </div>
+
+    <div class="dayfilters" id="dayFilters">
+      <button class="df active" data-f="all">全部</button>
+      <button class="df" data-f="nyc">纽约</button>
+      <button class="df" data-f="bos">波士顿</button>
+      <button class="df" data-f="dc">华盛顿</button>
+      <button class="df" data-f="transit">交通/跨城</button>
+    </div>
+
+    <div id="days">
+
+      <!-- DAY 1 -->
+      <div class="day" data-city="transit">
+        <div class="day-head" style="--c:var(--transit)">
+          <div class="day-num"><small>DAY</small><span class="n">1</span></div>
+          <div><div class="day-city">上海 → 纽约</div><div class="day-date">9月25日 · 周五</div></div>
+          <div class="spacer"></div><div class="day-tag">跨洋飞行</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev">
+            <span class="ev-time">11:40–23:00</span><span class="ev-dot"></span>
+            <div class="ev-body">
+              <div class="ev-title">上海浦东 → 纽约 JFK<span class="en">Shanghai Pudong · JFK</span></div>
+              <div class="ev-note">国际航班，飞行约 14 小时 20 分；落地后入关、取行李，前往酒店入住。</div>
+            </div>
+            <a class="ev-nav" data-nav="Shanghai Pudong International Airport" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+          </li>
+          <li class="ev">
+            <span class="ev-time">入住</span><span class="ev-dot"></span>
+            <div class="ev-body">
+              <div class="ev-title">Millennium Hilton One UN Plaza<span class="en">纽约 · 9.25–9.30</span></div>
+              <div class="ev-note">位于联合国广场旁，东岸中城，去大都会、MoMA 都方便。</div>
+            </div>
+            <a class="ev-nav" data-nav="Millennium Hilton New York One UN Plaza" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day" data-city="nyc">
+        <div class="day-head" style="--c:var(--nyc)">
+          <div class="day-num"><small>DAY</small><span class="n">2</span></div>
+          <div><div class="day-city">纽约 · 中城初探</div><div class="day-date">9月26日 · 周六</div></div>
+          <div class="spacer"></div><div class="day-tag">轻松收尾</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">上午</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">酒店休整<span class="en">Hotel Rest</span></div>
+            <div class="ev-note">倒时差，不安排重体力景点。</div>
+          </div></li>
+          <li class="ev"><span class="ev-time">14:00–15:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">时代广场<span class="en">Times Square</span></div>
+            <div class="ev-note">抵达后的轻松首站，感受曼哈顿的十字路口。</div>
+          </div><a class="ev-nav" data-nav="Times Square, Manhattan, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">15:30–17:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">第五大道 + 洛克菲勒中心<span class="en">Fifth Avenue · Rockefeller Center</span></div>
+            <div class="ev-note">沿第五大道向北漫步，以逛街、看建筑为主；视体力在 Rockefeller Center 短暂停留。</div>
+          </div><a class="ev-nav" data-nav="Rockefeller Center, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:30–19:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">自由活动 + 晚餐<span class="en">Dinner &amp; Leisure</span></div>
+            <div class="ev-note">首日落地以休息为主，可在 Midtown 就近晚餐。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 3 -->
+      <div class="day" data-city="nyc">
+        <div class="day-head" style="--c:var(--nyc)">
+          <div class="day-num"><small>DAY</small><span class="n">3</span></div>
+          <div><div class="day-city">纽约 · 大都会日</div><div class="day-date">9月27日 · 周日</div></div>
+          <div class="spacer"></div><div class="day-tag">博物馆</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:00–14:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">大都会艺术博物馆<span class="en">The Met</span></div>
+            <div class="ev-note">建议提前购票，成人约 $30，预留 4–4.5 小时。必看：埃及丹铎神庙、欧洲油画、中国馆、盔甲馆。周日 10:00–17:00 开放。</div>
+          </div><a class="ev-nav" data-nav="The Metropolitan Museum of Art, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">14:30–15:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">午餐 + 休息<span class="en">Lunch Break</span></div>
+            <div class="ev-note">不再塞第二个大馆，给 Met 留足完整参观时间。</div>
+          </div></li>
+          <li class="ev"><span class="ev-time">15:00–17:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">中央公园<span class="en">Central Park</span></div>
+            <div class="ev-note">从 Met 步行进入，轻松散步，选 5th Ave 东侧或公园内路线。</div>
+          </div><a class="ev-nav" data-nav="Central Park, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:00–18:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">Upper East Side 自由活动 + 晚餐<span class="en">UES Evening</span></div>
+            <div class="ev-note">不加付费景点，作为博物馆日轻松收尾。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 4 -->
+      <div class="day" data-city="nyc">
+        <div class="day-head" style="--c:var(--nyc)">
+          <div class="day-num"><small>DAY</small><span class="n">4</span></div>
+          <div><div class="day-city">纽约 · MoMA + SoHo + 9/11</div><div class="day-date">9月28日 · 周一</div></div>
+          <div class="spacer"></div><div class="day-tag">周一免费日</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:30–13:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">现代艺术博物馆<span class="en">MoMA</span></div>
+            <div class="ev-note">建议提前网上购票，成人 $30，周一 10:30–17:30。必看：《星夜》、毕加索、莫奈等。</div>
+          </div><a class="ev-nav" data-nav="Museum of Modern Art, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">13:30–14:15</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">MoMA 附近解决，避免跨区用餐。</div></div></li>
+          <li class="ev"><span class="ev-time">14:15–17:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">SoHo 购物<span class="en">SoHo Shopping</span></div>
+            <div class="ev-note">本日把主要购物时间留给 SoHo；重点逛 Broadway、Prince St、Spring St、Mercer/Crosby 一带。</div>
+          </div><a class="ev-nav" data-nav="SoHo, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:00–17:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">世贸中心 + Oculus<span class="en">World Trade Center</span></div>
+            <div class="ev-note">作为 9/11 博物馆前的缓冲；Oculus 免费进入。</div>
+          </div><a class="ev-nav" data-nav="The Oculus, World Trade Center, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:30–19:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">9/11 纪念博物馆<span class="en">9/11 Memorial &amp; Museum</span></div>
+            <div class="ev-note">【Plan A】当天美东 7:00 抢周一免费票，17:30–19:00 免费，限量先到先得、每人最多 4 张；【Plan B】抢不到则博物馆提前到约 15:45–17:15、SoHo 缩短，普通成人票 $36 需定时票。户外倒影池免费。</div>
+          </div><a class="ev-nav" data-nav="9/11 Memorial and Museum, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- DAY 5 -->
+      <div class="day" data-city="nyc">
+        <div class="day-head" style="--c:var(--nyc)">
+          <div class="day-num"><small>DAY</small><span class="n">5</span></div>
+          <div><div class="day-city">纽约 · 自然历史 + 布鲁克林</div><div class="day-date">9月29日 · 周二</div></div>
+          <div class="spacer"></div><div class="day-tag">博物馆 + 黄昏</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:00–13:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">美国自然历史博物馆<span class="en">AMNH</span></div>
+            <div class="ev-note">建议提前购票，纽约州外游客成人 $37，10:00–17:30。严格控制在 3 小时，不加付费特展。</div>
+            <button class="ticket" type="button" data-cap="美国自然历史博物馆 · 9/29 电子票">
+              <img class="tk-thumb" src="assets/ticket-amnh-929.png" alt="美国自然历史博物馆门票截图" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图</span><span class="tk-sub">General Admission · 2 成人 · $74</span></span>
+            </button>
+          </div><a class="ev-nav" data-nav="American Museum of Natural History, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">13:00–14:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">博物馆附近或前往 SoHo 途中解决。</div></div></li>
+          <li class="ev"><span class="ev-time">14:00–18:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">SoHo 深度购物 + 街区漫逛<span class="en">SoHo</span></div>
+            <div class="ev-note">整整 4 小时留给 SoHo：慢逛、购物、咖啡和小店，不再安排 Wall Street / Trinity Church 等低优先级景点。</div>
+          </div><a class="ev-nav" data-nav="SoHo, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">18:00–18:30</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">前往布鲁克林大桥<span class="en">To Brooklyn Bridge</span></div><div class="ev-note">预留过桥前交通时间。</div></div></li>
+          <li class="ev"><span class="ev-time">18:30–20:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">布鲁克林大桥 + DUMBO<span class="en">Brooklyn Bridge · DUMBO</span></div>
+            <div class="ev-note">9/29 纽约日落约 18:41，18:30 左右上桥可争取黄昏/蓝调时刻。</div>
+          </div><a class="ev-nav" data-nav="Brooklyn Bridge, New York" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- DAY 6 -->
+      <div class="day" data-city="bos">
+        <div class="day-head" style="--c:var(--bos)">
+          <div class="day-num"><small>DAY</small><span class="n">6</span></div>
+          <div><div class="day-city">纽约 → 波士顿 · 抵达日</div><div class="day-date">9月30日 · 周三</div></div>
+          <div class="spacer"></div><div class="day-tag">跨城 + 河畔</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">07:41–11:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">Amtrak NR190 · 纽约 → 波士顿<span class="en">Moynihan → South Station</span></div>
+            <div class="ev-note">约 3h49m；建议提前 30 分钟到站。购票：amtrak.com。</div>
+            <button class="ticket" type="button" data-cap="Amtrak NR190 · 9/30 纽约 → 波士顿">
+              <img class="tk-thumb" src="assets/train-nr190-930.png" alt="Amtrak NR190 车票截图" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图</span><span class="tk-sub">07:41 发车 · 12:06 抵 South Station</span></span>
+            </button>
+          </div></li>
+          <li class="ev"><span class="ev-time">14:00–15:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">波士顿公共图书馆<span class="en">Boston Public Library</span></div>
+            <div class="ev-note">免费，周三 9:00–20:00。重点看 McKim Building、Bates Hall、庭院。</div>
+          </div><a class="ev-nav" data-nav="Boston Public Library" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">15:45–17:15</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">昆西市场<span class="en">Quincy Market</span></div>
+            <div class="ev-note">免费进入，逛市场、吃下午茶/早晚餐。</div>
+          </div><a class="ev-nav" data-nav="Quincy Market, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:15–18:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">查尔斯河 / Esplanade<span class="en">Charles River</span></div>
+            <div class="ev-note">9/30 波士顿日落约 18:27，把最后一段留给河畔黄昏。</div>
+          </div><a class="ev-nav" data-nav="Charles River Esplanade, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- DAY 7 -->
+      <div class="day" data-city="bos">
+        <div class="day-head" style="--c:var(--bos)">
+          <div class="day-num"><small>DAY</small><span class="n">7</span></div>
+          <div><div class="day-city">波士顿 · MFA + 老城</div><div class="day-date">10月1日 · 周四</div></div>
+          <div class="spacer"></div><div class="day-tag">周四免费日</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:00–13:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">波士顿美术馆<span class="en">MFA Boston</span></div>
+            <div class="ev-note">成人 $30，周四 10:00–22:00 开放。必看：东亚文物、印象派、文艺复兴。</div>
+            <button class="ticket" type="button" data-cap="波士顿美术馆 MFA · 10/1 10:30 电子票（第 1 张）">
+              <img class="tk-thumb" src="assets/ticket-mfa-1001-1.png" alt="波士顿美术馆门票截图（第1张）" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图 · 第 1 张</span><span class="tk-sub">Maverick Kings · Nonmember · 10:30 入场</span></span>
+            </button>
+            <button class="ticket" type="button" data-cap="波士顿美术馆 MFA · 10/1 10:30 电子票（第 2 张）">
+              <img class="tk-thumb" src="assets/ticket-mfa-1001-2.png" alt="波士顿美术馆门票截图（第2张）" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图 · 第 2 张</span><span class="tk-sub">Maverick Kings · Nonmember · 10:30 入场</span></span>
+            </button>
+          </div><a class="ev-nav" data-nav="Museum of Fine Arts, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">13:30–14:15</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">MFA 附近，为下午户外留体力。</div></div></li>
+          <li class="ev"><span class="ev-time">14:15–15:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">比肯山<span class="en">Beacon Hill</span></div>
+            <div class="ev-note">红砖街区、Acorn Street 等，免费。</div>
+          </div><a class="ev-nav" data-nav="Beacon Hill, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">15:30–16:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">自由之路（核心段）<span class="en">Freedom Trail</span></div>
+            <div class="ev-note">步行路线本身免费，走 Boston Common → Old State House 核心段。</div>
+          </div><a class="ev-nav" data-nav="Freedom Trail, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:00–19:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">伊莎贝拉·斯图尔特·加德纳博物馆<span class="en">Isabella Stewart Gardner Museum</span></div>
+            <div class="ev-note">【重点省钱】10/1 周四 17:00–21:00 全员免费；免费票提前 2 天（9/29）开放。建议 17:00 入场，留 2–2.5 小时。</div>
+          </div><a class="ev-nav" data-nav="Isabella Stewart Gardner Museum, Boston" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- DAY 8 -->
+      <div class="day" data-city="bos">
+        <div class="day-head" style="--c:var(--bos)">
+          <div class="day-num"><small>DAY</small><span class="n">8</span></div>
+          <div><div class="day-city">康科德自驾 · 瓦尔登湖</div><div class="day-date">10月2日 · 周五</div></div>
+          <div class="spacer"></div><div class="day-tag">自驾一日</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">08:00–09:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">取车 + 自驾前往康科德<span class="en">Drive to Concord</span></div>
+            <div class="ev-note">市区门店取车，当日取还、不跨夜。证件：护照 + 驾照 + 翻译件。</div>
+          </div></li>
+          <li class="ev"><span class="ev-time">09:00–12:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">瓦尔登湖<span class="en">Walden Pond</span></div>
+            <div class="ev-note">停车费州外车牌 $30/车；车位满会关闭入口，建议 9:00 前到。湖畔步道 + 梭罗小屋遗迹。</div>
+          </div><a class="ev-nav" data-nav="Walden Pond State Reservation, Concord, Massachusetts" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">12:00–13:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">Concord / Walden Pond 附近解决。</div></div></li>
+          <li class="ev"><span class="ev-time">13:00–14:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">康科德博物馆<span class="en">Concord Museum</span></div>
+            <div class="ev-note">成人约 $20；10 月周五开放时间以官方日历为准（约 10:00–16:00）。</div>
+          </div><a class="ev-nav" data-nav="Concord Museum, Massachusetts" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">14:30–15:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">北桥<span class="en">North Bridge / Minute Man NHP</span></div>
+            <div class="ev-note">免费，日出至日落可游览。</div>
+          </div><a class="ev-nav" data-nav="North Bridge, Concord, Massachusetts" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">15:30–18:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">自驾返回波士顿 + 还车<span class="en">Drive back</span></div>
+            <div class="ev-note">建议提前加满油；还车后不再排景点。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 9 -->
+      <div class="day" data-city="dc">
+        <div class="day-head" style="--c:var(--dc)">
+          <div class="day-num"><small>DAY</small><span class="n">9</span></div>
+          <div><div class="day-city">波士顿 → 华盛顿 · 国家广场黄昏</div><div class="day-date">10月3日 · 周六</div></div>
+          <div class="spacer"></div><div class="day-tag">跨城 + 纪念碑</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:20–13:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">达美 DL5592 · BOS → DCA<span class="en">Boston → Washington</span></div>
+            <div class="ev-note">建议提前约 2 小时到 BOS；落地 DCA 搭地铁进城。</div>
+          </div></li>
+          <li class="ev"><span class="ev-time">14:45–16:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">美国国会图书馆<span class="en">Library of Congress</span></div>
+            <div class="ev-note">免费但必须预约 Timed-Entry Ticket，可提前 30 天；周六 10:00–17:00，最晚 16:30 入场。</div>
+            <button class="ticket" type="button" data-cap="国会图书馆 · 10/3 定时入场票">
+              <img class="tk-thumb" src="assets/ticket-loc-1003.png" alt="国会图书馆门票截图" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图</span><span class="tk-sub">16:00 入场 · 2 人 · Jefferson Building</span></span>
+            </button>
+          </div><a class="ev-nav" data-nav="Library of Congress, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">16:00–16:30</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">前往华盛顿纪念碑<span class="en">To Washington Monument</span></div><div class="ev-note">建议网约车/出租车，约 10–15 分钟。</div></div></li>
+          <li class="ev"><span class="ev-time">16:30–17:15</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">华盛顿纪念碑（外观）<span class="en">Washington Monument</span></div>
+            <div class="ev-note">本版安排外观，不排队登顶；登顶另需 Timed Entry（网上预约每张 $1 服务费）。</div>
+          </div><a class="ev-nav" data-nav="Washington Monument, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:15–18:40</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">林肯纪念堂 + 倒影池<span class="en">Lincoln Memorial · Reflecting Pool</span></div>
+            <div class="ev-note">把重点留给 National Mall 黄昏；从纪念碑步行约 20–25 分钟。</div>
+          </div><a class="ev-nav" data-nav="Lincoln Memorial, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">18:40–18:55</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">National Mall 日落<span class="en">Sunset</span></div>
+            <div class="ev-note">10/3 华盛顿日落约 18:47，天气允许时在林肯纪念堂一带等日落。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 10 -->
+      <div class="day" data-city="dc">
+        <div class="day-head" style="--c:var(--dc)">
+          <div class="day-num"><small>DAY</small><span class="n">10</span></div>
+          <div><div class="day-city">华盛顿 · 航空航天 + 纪念碑群</div><div class="day-date">10月4日 · 周日</div></div>
+          <div class="spacer"></div><div class="day-tag">博物馆 + 纪念碑</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:00–12:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">国家航空航天博物馆<span class="en">Air and Space Museum</span></div>
+            <div class="ev-note">免费但必须预约 Timed-Entry Pass，10:00–17:30。建议抢 10:00 入场。必看：阿波罗登月舱、莱特兄弟飞机。</div>
+            <button class="ticket" type="button" data-cap="国家航空航天博物馆 · 10/4 预约票">
+              <img class="tk-thumb" src="assets/ticket-airspace-1004.png" alt="国家航空航天博物馆预约票截图" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图</span><span class="tk-sub">10:00 入场 · 2 张免费定时票</span></span>
+            </button>
+          </div><a class="ev-nav" data-nav="National Air and Space Museum, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">12:30–13:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">National Mall 附近解决，减少往返。</div></div></li>
+          <li class="ev"><span class="ev-time">13:00–16:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">国家自然历史博物馆<span class="en">Natural History Museum</span></div>
+            <div class="ev-note">免费无需预约，10:00–17:30。必看：恐龙化石、希望钻石、动物标本，建议 3 小时。</div>
+          </div><a class="ev-nav" data-nav="National Museum of Natural History, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">16:15–17:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">越战纪念碑<span class="en">Vietnam Veterans Memorial</span></div>
+            <div class="ev-note">免费，快速参观主要纪念墙。</div>
+          </div><a class="ev-nav" data-nav="Vietnam Veterans Memorial, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">17:00–17:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">韩战纪念碑<span class="en">Korean War Veterans Memorial</span></div>
+            <div class="ev-note">免费，从越战纪念碑步行约 5 分钟。</div>
+          </div><a class="ev-nav" data-nav="Korean War Veterans Memorial, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+        </ul>
+      </div>
+
+      <!-- DAY 11 -->
+      <div class="day" data-city="dc">
+        <div class="day-head" style="--c:var(--dc)">
+          <div class="day-num"><small>DAY</small><span class="n">11</span></div>
+          <div><div class="day-city">华盛顿 → 纽约 · 国家美术馆</div><div class="day-date">10月5日 · 周一</div></div>
+          <div class="spacer"></div><div class="day-tag">博物馆 + 跨城</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">10:00–12:00</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">国家美术馆<span class="en">National Gallery of Art</span></div>
+            <div class="ev-note">永久免费，无需预约，10:00–17:00。重点看 West Building 经典绘画。</div>
+          </div><a class="ev-nav" data-nav="National Gallery of Art, Washington DC" title="地图导航"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></a></li>
+          <li class="ev"><span class="ev-time">12:00–13:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">午餐<span class="en">Lunch</span></div><div class="ev-note">National Mall 附近解决。</div></div></li>
+          <li class="ev"><span class="ev-time">13:00–14:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">回酒店取行李 + 退房<span class="en">Check out</span></div><div class="ev-note">提前退房并确认行李，给 Union Station 留缓冲。</div></div></li>
+          <li class="ev"><span class="ev-time">14:00–15:00</span><span class="ev-dot"></span><div class="ev-body"><div class="ev-title">前往 Union Station + 候车<span class="en">Union Station</span></div><div class="ev-note">建议 15:00 前到站；16:20 Acela 出发。</div></div></li>
+          <li class="ev"><span class="ev-time">16:20–19:20</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">Amtrak Acela 2162 · 华盛顿 → 纽约<span class="en">Washington → New York</span></div>
+            <div class="ev-note">约 3h，Business 舱；NextGen Acela 城际高铁。</div>
+            <button class="ticket" type="button" data-cap="Amtrak Acela 2162 · 10/5 华盛顿 → 纽约">
+              <img class="tk-thumb" src="assets/train-acela-1005.png" alt="Amtrak Acela 2162 车票截图" loading="lazy">
+              <span class="tk-body"><span class="tk-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></svg>票券截图</span><span class="tk-sub">16:20 发车 · 19:20 抵纽约</span></span>
+            </button>
+          </div></li>
+          <li class="ev"><span class="ev-time">19:30–20:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">抵达纽约 + 前往 JFK 附近酒店<span class="en">Arrive NYC</span></div>
+            <div class="ev-note">Moynihan → Jamaica（LIRR）→ JFK AirTrain；为次日航班留足时间。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 12 -->
+      <div class="day" data-city="transit">
+        <div class="day-head" style="--c:var(--transit)">
+          <div class="day-num"><small>DAY</small><span class="n">12</span></div>
+          <div><div class="day-city">纽约 → 上海 · 返程</div><div class="day-date">10月6日 · 周二</div></div>
+          <div class="spacer"></div><div class="day-tag">跨洋返程</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">09:30–10:30</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">前往 JFK 国际机场<span class="en">To JFK</span></div>
+            <div class="ev-note">建议 09:30 前出门；国际航班至少预留约 3 小时。</div>
+          </div></li>
+          <li class="ev"><span class="ev-time">11:45 起飞</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">纽约 JFK → 上海浦东<span class="en">JFK → PVG</span></div>
+            <div class="ev-note">国际航班，飞行约 14 小时 15 分。</div>
+          </div></li>
+        </ul>
+      </div>
+
+      <!-- DAY 13 -->
+      <div class="day" data-city="transit">
+        <div class="day-head" style="--c:var(--transit)">
+          <div class="day-num"><small>DAY</small><span class="n">13</span></div>
+          <div><div class="day-city">飞行中 → 上海</div><div class="day-date">10月7日–8日 · 周二/三</div></div>
+          <div class="spacer"></div><div class="day-tag">抵达</div>
+        </div>
+        <ul class="timeline">
+          <li class="ev"><span class="ev-time">全天</span><span class="ev-dot"></span><div class="ev-body">
+            <div class="ev-title">跨洋飞行 → 上海浦东<span class="en">Arrive Shanghai</span></div>
+            <div class="ev-note">10月8日约 15:00 抵达上海浦东国际机场，行程结束。</div>
+          </div></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Todo -->
+<section id="todo" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Checklist · 出发前待办</div>
+      <h2 class="serif">出发前待办清单</h2>
+      <p>逐项勾选，进度会自动保存在本机浏览器。</p>
+    </div>
+    <div class="todo-wrap">
+      <div class="todo-grp">
+        <h4>证件与支付</h4>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>护照有效期核对 + 美国签证/ESTA 状态确认</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>信用卡（含境外无接触支付）+ 少量现金</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>国际驾照翻译件（10/2 自驾用）</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>手机流量卡 / 国际漫游 + 离线地图缓存</div></span></label>
+      </div>
+      <div class="todo-grp">
+        <h4>票务与预订（关键时间点）</h4>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>国际往返 + 达美 DL5592 电子票保存</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>Amtrak NR190 / Acela 2162 车票凭证</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>9/28 周一 7:00（美东）抢 9/11 博物馆免费票</div><div class="t-sub">限量、先到先得；抢不到按 Plan B 提前入场</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>9/29 抢加德纳博物馆周四免费票（10/1 17:00–21:00）</div><div class="t-sub">免费票提前 2 天开放</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>国会图书馆、航空航天博物馆 Timed-Entry 预约</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>大都会 / MoMA / AMNH / MFA 购票</div></span></label>
+      </div>
+      <div class="todo-grp">
+        <h4>酒店与租车</h4>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>四家酒店预订确认（预订号切勿公开到网页）</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>10/2 康科德租车订单 + 取还门店确认</div></span></label>
+      </div>
+      <div class="todo-progress" id="todoProgress">已完成 0 / 12</div>
+    </div>
+  </div>
+</section>
+
+<!-- Tips -->
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Tips · 小贴士</div>
+      <h2 class="serif">行前与途中小贴士</h2>
+    </div>
+    <div class="tips">
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>地铁与导航</h4>
+        <p>纽约坐 MTA（可刷 OMNY/信用卡）、波士顿 MBTA、华盛顿 WMATA。美国境内直接用 Google Maps 导航最靠谱，本页每个地点都可一键跳转。</p>
+      </div>
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+        <h4>免费票抢票提醒</h4>
+        <p>三个「免费/预约」窗口务必设闹钟：① 9/28 的 9/11 博物馆周一免费票（当地 7:00 抢，限量）；② 10/1 加德纳周四免费（提前 2 天开放）；③ 国会图书馆 + 航空航天博物馆的 Timed-Entry。</p>
+      </div>
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>博物馆闭馆与开放</h4>
+        <p>多数馆有固定闭馆日与时段差异：Met 周日 10–17、MoMA 周一 10:30–17:30、AMNH 与自然历史 10–17:30、MFA 周四开到 22:00。建议当日再核对官网。</p>
+      </div>
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-6 6c0 3 6 12 6 12s6-9 6-12a6 6 0 0 0-6-6z"/><circle cx="12" cy="9" r="2"/></svg></div>
+        <h4>秋日着装与天气</h4>
+        <p>9 月底 10 月初美东已入秋、早晚温差大，带防风外套与舒适步行鞋；日落约 18:30–18:50，黄昏打卡（布鲁克林大桥、国家广场）记得掐点。</p>
+      </div>
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>公开分享安全</h4>
+        <p>发布到公开网页前，务必去掉机票确认号、酒店预订号等个人敏感信息（本页已不含这些信息）。</p>
+      </div>
+      <div class="tip">
+        <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+        <h4>行程弹性与退改</h4>
+        <p>门票多数为定时票建议提前购；如遇抢票失败，本页已备好 Plan B（9/11 博物馆提前入场、SoHo 压缩）。天气或闭馆变动时按优先级取舍低优先级景点。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-inner">
+    <div>美东 13 天博物馆深度之旅 · 旅行手册<br>生成于 2026 · 数据来源：行程最终优化版（Excel）</div>
+    <div>手机 / 平板 / 电脑自适应 · 白天夜晚自动换色<br>点击任意「图钉」图标即在地图导航</div>
+  </div>
+</footer>
+
+<button class="backtop" id="backtop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- 票券大图弹窗 -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="票券截图预览">
+  <figure class="lb-figure">
+    <button class="lb-close" id="lbClose" aria-label="关闭">✕</button>
+    <img class="lb-img" id="lbImg" src="" alt="票券截图大图">
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+    <span class="lb-hint">点击空白处、右上角 ✕ 或按 Esc 关闭</span>
+  </figure>
+</div>
+
+<script>
+/* ---- 地图导航链接构建 ---- */
+document.querySelectorAll('[data-nav]').forEach(function(a){
+  a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(a.getAttribute('data-nav'));
+  a.target = '_blank'; a.rel = 'noopener';
+});
+
+/* ---- 日夜主题切换 ---- */
+var root = document.documentElement;
+var btn = document.getElementById('themeBtn');
+var sun = document.getElementById('iconSun');
+var moon = document.getElementById('iconMoon');
+function applyTheme(t){
+  root.setAttribute('data-theme', t);
+  var dark = (t === 'dark') || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  sun.style.display = dark ? 'none' : 'block';
+  moon.style.display = dark ? 'block' : 'none';
+}
+applyTheme('auto');
+var saved = null;
+try{ saved = localStorage.getItem('trip-theme'); }catch(e){}
+if(saved && (saved==='light'||saved==='dark')) applyTheme(saved);
+btn.addEventListener('click', function(){
+  var cur = root.getAttribute('data-theme');
+  var curDark = (cur === 'dark') || (cur === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+  var next = curDark ? 'light' : 'dark';
+  applyTheme(next);
+  try{ localStorage.setItem('trip-theme', next); }catch(e){}
+});
+
+/* ---- 倒计时 ---- */
+var DEPART = new Date('2026-09-25T11:40:00+08:00').getTime();
+var ARRIVE = new Date('2026-10-08T15:00:00+08:00').getTime();
+function pad(n){ return (n<10?'0':'')+n; }
+function tick(){
+  var now = Date.now();
+  var diff = DEPART - now;
+  var hint = document.getElementById('cd-hint');
+  if(diff > 0){
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor(diff%86400000/3600000);
+    var m = Math.floor(diff%3600000/60000);
+    var s = Math.floor(diff%60000/1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = pad(h);
+    document.getElementById('cd-mins').textContent = pad(m);
+    document.getElementById('cd-secs').textContent = pad(s);
+    hint.textContent = '距 2026-09-25 11:40 上海浦东起飞';
+  } else if(now < ARRIVE){
+    document.getElementById('cd-days').textContent = '✓';
+    document.getElementById('cd-hours').textContent = '—';
+    document.getElementById('cd-mins').textContent = '—';
+    document.getElementById('cd-secs').textContent = '—';
+    hint.textContent = '行程进行中，祝旅途愉快';
+  } else {
+    document.getElementById('cd-days').textContent = '✓';
+    document.getElementById('cd-hours').textContent = '✓';
+    document.getElementById('cd-mins').textContent = '—';
+    document.getElementById('cd-secs').textContent = '—';
+    hint.textContent = '行程已圆满结束，期待下一次出发';
+  }
+}
+tick(); setInterval(tick, 1000);
+
+/* ---- 待办勾选 + 进度 ---- */
+var boxes = document.querySelectorAll('.todo input');
+function updateTodo(){
+  var total = boxes.length, done = 0;
+  boxes.forEach(function(b){ if(b.checked) done++; });
+  document.getElementById('todoProgress').textContent = '已完成 ' + done + ' / ' + total;
+  try{ localStorage.setItem('trip-todo-' + boxes.length, JSON.stringify(Array.prototype.map.call(boxes,function(b){return b.checked}))); }catch(e){}
+}
+boxes.forEach(function(b,i){
+  try{
+    var st = JSON.parse(localStorage.getItem('trip-todo-' + boxes.length) || '[]');
+    if(st[i]) b.checked = true;
+  }catch(e){}
+  b.addEventListener('change', updateTodo);
+});
+updateTodo();
+
+/* ---- 每日行程城市筛选 ---- */
+var filters = document.getElementById('dayFilters');
+var days = document.querySelectorAll('.day');
+filters.addEventListener('click', function(e){
+  var b = e.target.closest('.df'); if(!b) return;
+  filters.querySelectorAll('.df').forEach(function(x){x.classList.remove('active')});
+  b.classList.add('active');
+  var f = b.getAttribute('data-f');
+  days.forEach(function(d){
+    var show = (f === 'all') || (d.getAttribute('data-city') === f);
+    d.classList.toggle('dim', !show);
+  });
+});
+
+/* ---- 回到顶部 ---- */
+var backtop = document.getElementById('backtop');
+backtop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+window.addEventListener('scroll', function(){ backtop.style.opacity = window.scrollY > 600 ? '1' : '0'; backtop.style.pointerEvents = window.scrollY > 600 ? 'auto' : 'none'; });
+backtop.style.opacity = '0'; backtop.style.pointerEvents = 'none';
+
+/* ---- 出现动画 ---- */
+var els = document.querySelectorAll('.day, section, .stat, .city-card, .hotel, .trans, .tip, .todo-wrap');
+if('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.06});
+  els.forEach(function(el){ el.classList.add('reveal'); io.observe(el); });
+} else {
+  els.forEach(function(el){ el.classList.add('in'); });
+}
+
+/* ---- 票券大图弹窗 ---- */
+var lightbox = document.getElementById('lightbox');
+var lbImg = document.getElementById('lbImg');
+var lbCap = document.getElementById('lbCap');
+function openLb(img, cap){
+  lbImg.src = img;
+  lbImg.alt = cap;
+  lbCap.textContent = cap;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb(){
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.ticket[data-cap]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var img = btn.querySelector('img.tk-thumb');
+    if(img) openLb(img.src, btn.getAttribute('data-cap'));
+  });
+});
+document.getElementById('lbClose').addEventListener('click', closeLb);
+lightbox.addEventListener('click', function(e){ if(e.target === lightbox) closeLb(); });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLb(); });
+
+/* ---- 目录侧栏（日期标题 + 点击跳转 + 开合） ---- */
+var tocToggle = document.getElementById('tocToggle');
+var tocSidebar = document.getElementById('tocSidebar');
+var tocScrim = document.getElementById('tocScrim');
+var tocList = document.getElementById('tocList');
+var cityColor = {nyc:'var(--nyc)', bos:'var(--bos)', dc:'var(--dc)', transit:'var(--transit)'};
+document.querySelectorAll('#days .day').forEach(function(d){
+  var num = d.querySelector('.day-num .n').textContent;
+  var city = d.querySelector('.day-city').textContent;
+  var date = d.querySelector('.day-date').textContent;
+  var a = document.createElement('a');
+  a.className = 'toc-item';
+  a.href = '#schedule';
+  a.style.setProperty('--toc-c', cityColor[d.getAttribute('data-city')] || 'var(--brand)');
+  a.innerHTML = '<span class="toc-num">' + num + '</span><span class="toc-main"><span class="toc-city">' + city + '</span><span class="toc-date">' + date + '</span></span>';
+  a.addEventListener('click', function(ev){
+    ev.preventDefault();
+    d.scrollIntoView({behavior:'smooth', block:'start'});
+    closeToc();
+  });
+  tocList.appendChild(a);
+});
+function openToc(){ tocSidebar.classList.add('open'); tocScrim.classList.add('show'); tocToggle.setAttribute('aria-expanded','true'); tocSidebar.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+function closeToc(){ tocSidebar.classList.remove('open'); tocScrim.classList.remove('show'); tocToggle.setAttribute('aria-expanded','false'); tocSidebar.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+tocToggle.addEventListener('click', function(){ tocSidebar.classList.contains('open') ? closeToc() : openToc(); });
+document.getElementById('tocClose').addEventListener('click', closeToc);
+tocScrim.addEventListener('click', closeToc);
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeToc(); });
+</script>
+</body>
+</html>
