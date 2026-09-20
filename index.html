@@ -305,6 +305,23 @@ a.today-item.done .td-num{background:#9aa0a6}
 
 /* ===== 购票状态（仅文字提示，不含图片） ===== */
 .tk-status{display:inline-block;margin-top:6px;font-size:12.5px;font-weight:500;color:var(--text-3)}
+
+/* ===== 每日路线概览图 ===== */
+.route-map{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:12px 14px 10px;background:var(--card-2);border-bottom:1px solid var(--line)}
+.route-map svg{display:block;width:100%;height:auto}
+.rm-node{stroke:var(--card);stroke-width:2.5}
+.rm-num{fill:#fff;font-size:12.5px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+.rm-name{font-size:12.5px;font-weight:600;fill:var(--text);text-anchor:middle}
+.rm-sub{font-size:10.5px;fill:var(--text-3);text-anchor:middle}
+.rm-line{stroke-width:3;stroke-linecap:round}
+.day[data-city="nyc"] .rm-node{fill:var(--nyc)}
+.day[data-city="nyc"] .rm-line{stroke:var(--nyc)}
+.day[data-city="bos"] .rm-node{fill:var(--bos)}
+.day[data-city="bos"] .rm-line{stroke:var(--bos)}
+.day[data-city="dc"] .rm-node{fill:var(--dc)}
+.day[data-city="dc"] .rm-line{stroke:var(--dc)}
+.day[data-city="transit"] .rm-node{fill:var(--transit)}
+.day[data-city="transit"] .rm-line{stroke:var(--transit)}
 </style>
 </head>
 <body>
@@ -530,7 +547,23 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">上海 → 纽约</div><div class="day-date">9月25日 · 周五</div></div>
           <div class="spacer"></div><div class="day-tag">跨洋飞行</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 1 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">上海浦东</text>
+<text class="rm-sub" x="80.0" y="90">PVG</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">纽约 JFK</text>
+<text class="rm-sub" x="230.0" y="90">JFK</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">酒店·联合国广场</text>
+<text class="rm-sub" x="380.0" y="90">UN Plaza</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev">
             <span class="ev-time">11:40–23:00</span><span class="ev-dot"></span>
             <div class="ev-body">
@@ -557,7 +590,23 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 · 中城初探</div><div class="day-date">9月26日 · 周六</div></div>
           <div class="spacer"></div><div class="day-tag">轻松收尾</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 2 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">酒店</text>
+<text class="rm-sub" x="80.0" y="90">Hotel</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">时代广场</text>
+<text class="rm-sub" x="230.0" y="90">Times Square</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">第五大道·洛克菲勒</text>
+<text class="rm-sub" x="380.0" y="90">5th Ave · Rockefeller</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">上午</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">酒店休整<span class="en">Hotel Rest</span></div>
             <div class="ev-note">倒时差，不安排重体力景点。</div>
@@ -584,7 +633,19 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 · 大都会日</div><div class="day-date">9月27日 · 周日</div></div>
           <div class="spacer"></div><div class="day-tag">博物馆</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 3 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">大都会博物馆</text>
+<text class="rm-sub" x="80.0" y="90">The Met</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">2</text>
+<text class="rm-name" x="380.0" y="72">中央公园</text>
+<text class="rm-sub" x="380.0" y="90">Central Park</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:00–14:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">大都会艺术博物馆<span class="en">The Met</span></div>
             <div class="ev-note">建议提前购票，成人约 $30，预留 4–4.5 小时。必看：埃及丹铎神庙、欧洲油画、中国馆、盔甲馆。周日 10:00–17:00 开放。</div>
@@ -611,7 +672,27 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 · MoMA + SoHo + 9/11</div><div class="day-date">9月28日 · 周一</div></div>
           <div class="spacer"></div><div class="day-tag">周一免费日</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 610 104" style="min-width:610px" role="img" aria-label="Day 4 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="530.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">现代艺术博物馆</text>
+<text class="rm-sub" x="80.0" y="90">MoMA</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">SoHo 购物</text>
+<text class="rm-sub" x="230.0" y="90">SoHo</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">世贸中心·Oculus</text>
+<text class="rm-sub" x="380.0" y="90">WTC · Oculus</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">9/11 纪念馆</text>
+<text class="rm-sub" x="530.0" y="90">9/11 Museum</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:30–13:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">现代艺术博物馆<span class="en">MoMA</span></div>
             <div class="ev-note">建议提前网上购票，成人 $30，周一 10:30–17:30。必看：《星夜》、毕加索、莫奈等。</div>
@@ -639,7 +720,23 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 · 自然历史 + 布鲁克林</div><div class="day-date">9月29日 · 周二</div></div>
           <div class="spacer"></div><div class="day-tag">博物馆 + 黄昏</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 5 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">自然历史博物馆</text>
+<text class="rm-sub" x="80.0" y="90">AMNH</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">SoHo 购物</text>
+<text class="rm-sub" x="230.0" y="90">SoHo</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">布鲁克林大桥·DUMBO</text>
+<text class="rm-sub" x="380.0" y="90">Brooklyn Bridge</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:00–13:00</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">美国自然历史博物馆<span class="en">AMNH</span></div>
             <div class="ev-note">建议提前购票，纽约州外游客成人 $37，10:00–17:30。严格控制在 3 小时，不加付费特展。</div>
@@ -665,7 +762,31 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 → 波士顿 · 抵达日</div><div class="day-date">9月30日 · 周三</div></div>
           <div class="spacer"></div><div class="day-tag">跨城 + 河畔</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 760 104" style="min-width:760px" role="img" aria-label="Day 6 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="680.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">纽约 Moynihan 站</text>
+<text class="rm-sub" x="80.0" y="90">New York</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">波士顿南站</text>
+<text class="rm-sub" x="230.0" y="90">South Station</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">公共图书馆</text>
+<text class="rm-sub" x="380.0" y="90">Public Library</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">昆西市场</text>
+<text class="rm-sub" x="530.0" y="90">Quincy Market</text>
+<circle class="rm-node" cx="680.0" cy="40" r="15"/>
+<text class="rm-num" x="680.0" y="40">5</text>
+<text class="rm-name" x="680.0" y="72">查尔斯河</text>
+<text class="rm-sub" x="680.0" y="90">Charles River</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">07:41–11:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">Amtrak NR190 · 纽约 → 波士顿<span class="en">Moynihan → South Station</span></div>
             <div class="ev-note">约 3h49m；建议提前 30 分钟到站。购票：amtrak.com。</div>
@@ -693,7 +814,23 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">波士顿 · MFA + 加德纳</div><div class="day-date">10月1日 · 周四</div></div>
           <div class="spacer"></div><div class="day-tag">周四免费日</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 7 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">波士顿美术馆</text>
+<text class="rm-sub" x="80.0" y="90">MFA</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">Back Bay·纽伯里街</text>
+<text class="rm-sub" x="230.0" y="90">Newbury St</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">加德纳博物馆</text>
+<text class="rm-sub" x="380.0" y="90">Gardner</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:30–14:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">波士顿美术馆<span class="en">MFA Boston</span></div>
             <div class="ev-note">已购票 10:30 入场，逛约 3–4 小时；周四开到 22:00。必看：东亚文物、印象派、文艺复兴。</div>
@@ -717,7 +854,31 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">波士顿 · 完整自由之路</div><div class="day-date">10月2日 · 周五</div></div>
           <div class="spacer"></div><div class="day-tag">步行一日</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 760 104" style="min-width:760px" role="img" aria-label="Day 8 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="680.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">比肯山</text>
+<text class="rm-sub" x="80.0" y="90">Beacon Hill</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">自由之路·中段</text>
+<text class="rm-sub" x="230.0" y="90">Trail · Downtown</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">North End 午餐</text>
+<text class="rm-sub" x="380.0" y="90">Lunch</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">自由之路·北段</text>
+<text class="rm-sub" x="530.0" y="90">Trail · North End</text>
+<circle class="rm-node" cx="680.0" cy="40" r="15"/>
+<text class="rm-num" x="680.0" y="40">5</text>
+<text class="rm-name" x="680.0" y="72">邦克山纪念碑</text>
+<text class="rm-sub" x="680.0" y="90">Bunker Hill</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">09:00–10:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">比肯山<span class="en">Beacon Hill</span></div>
             <div class="ev-note">红砖街区、Acorn Street，清晨人少、光线好，免费。</div>
@@ -746,7 +907,35 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">波士顿 → 华盛顿 · 国家广场黄昏</div><div class="day-date">10月3日 · 周六</div></div>
           <div class="spacer"></div><div class="day-tag">跨城 + 纪念碑</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 910 104" style="min-width:910px" role="img" aria-label="Day 9 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="830.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">BOS 机场</text>
+<text class="rm-sub" x="80.0" y="90">BOS</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">DCA 机场</text>
+<text class="rm-sub" x="230.0" y="90">DCA</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">国会图书馆</text>
+<text class="rm-sub" x="380.0" y="90">Library of Congress</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">华盛顿纪念碑</text>
+<text class="rm-sub" x="530.0" y="90">Washington Monument</text>
+<circle class="rm-node" cx="680.0" cy="40" r="15"/>
+<text class="rm-num" x="680.0" y="40">5</text>
+<text class="rm-name" x="680.0" y="72">林肯纪念堂</text>
+<text class="rm-sub" x="680.0" y="90">Lincoln Memorial</text>
+<circle class="rm-node" cx="830.0" cy="40" r="15"/>
+<text class="rm-num" x="830.0" y="40">6</text>
+<text class="rm-name" x="830.0" y="72">National Mall 日落</text>
+<text class="rm-sub" x="830.0" y="90">Sunset</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:20–13:00</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">达美 DL5592 · BOS → DCA<span class="en">Boston → Washington</span></div>
             <div class="ev-note">建议提前约 2 小时到 BOS；落地 DCA 搭地铁进城。</div>
@@ -779,7 +968,27 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">华盛顿 · 航空航天 + 纪念碑群</div><div class="day-date">10月4日 · 周日</div></div>
           <div class="spacer"></div><div class="day-tag">博物馆 + 纪念碑</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 610 104" style="min-width:610px" role="img" aria-label="Day 10 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="530.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">航空航天博物馆</text>
+<text class="rm-sub" x="80.0" y="90">Air & Space</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">自然历史博物馆</text>
+<text class="rm-sub" x="230.0" y="90">Natural History</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">越战纪念碑</text>
+<text class="rm-sub" x="380.0" y="90">Vietnam Memorial</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">韩战纪念碑</text>
+<text class="rm-sub" x="530.0" y="90">Korean Memorial</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:00–12:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">国家航空航天博物馆<span class="en">Air and Space Museum</span></div>
             <div class="ev-note">免费但必须预约 Timed-Entry Pass，10:00–17:30。建议抢 10:00 入场。必看：阿波罗登月舱、莱特兄弟飞机。</div>
@@ -808,7 +1017,27 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">华盛顿 → 纽约 · 国家美术馆</div><div class="day-date">10月5日 · 周一</div></div>
           <div class="spacer"></div><div class="day-tag">博物馆 + 跨城</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 610 104" style="min-width:610px" role="img" aria-label="Day 11 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="530.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">国家美术馆</text>
+<text class="rm-sub" x="80.0" y="90">National Gallery</text>
+<circle class="rm-node" cx="230.0" cy="40" r="15"/>
+<text class="rm-num" x="230.0" y="40">2</text>
+<text class="rm-name" x="230.0" y="72">Union Station</text>
+<text class="rm-sub" x="230.0" y="90">Amtrak</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">3</text>
+<text class="rm-name" x="380.0" y="72">纽约·抵达</text>
+<text class="rm-sub" x="380.0" y="90">New York</text>
+<circle class="rm-node" cx="530.0" cy="40" r="15"/>
+<text class="rm-num" x="530.0" y="40">4</text>
+<text class="rm-name" x="530.0" y="72">JFK 附近酒店</text>
+<text class="rm-sub" x="530.0" y="90">Hotel</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">10:00–12:00</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">国家美术馆<span class="en">National Gallery of Art</span></div>
             <div class="ev-note">永久免费，无需预约，10:00–17:00。重点看 West Building 经典绘画。</div>
@@ -835,7 +1064,19 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">纽约 → 上海 · 返程</div><div class="day-date">10月6日 · 周二</div></div>
           <div class="spacer"></div><div class="day-tag">跨洋返程</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 12 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">酒店</text>
+<text class="rm-sub" x="80.0" y="90">Hotel</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">2</text>
+<text class="rm-name" x="380.0" y="72">JFK 机场</text>
+<text class="rm-sub" x="380.0" y="90">JFK</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">09:30–10:30</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">前往 JFK 国际机场<span class="en">To JFK</span></div>
             <div class="ev-note">建议 09:30 前出门；国际航班至少预留约 3 小时。</div>
@@ -854,7 +1095,19 @@ a.today-item.done .td-num{background:#9aa0a6}
           <div><div class="day-city">飞行中 → 上海</div><div class="day-date">10月7日–8日 · 周二/三</div></div>
           <div class="spacer"></div><div class="day-tag">抵达</div>
         </div>
-        <ul class="timeline">
+        <div class="route-map">
+<svg viewBox="0 0 460 104" style="min-width:460px" role="img" aria-label="Day 13 路线概览">
+<line class="rm-line" x1="80.0" y1="40" x2="380.0" y2="40"/>
+<circle class="rm-node" cx="80.0" cy="40" r="15"/>
+<text class="rm-num" x="80.0" y="40">1</text>
+<text class="rm-name" x="80.0" y="72">纽约 JFK</text>
+<text class="rm-sub" x="80.0" y="90">JFK</text>
+<circle class="rm-node" cx="380.0" cy="40" r="15"/>
+<text class="rm-num" x="380.0" y="40">2</text>
+<text class="rm-name" x="380.0" y="72">上海浦东</text>
+<text class="rm-sub" x="380.0" y="90">PVG</text>
+</svg>
+</div><ul class="timeline">
           <li class="ev"><span class="ev-time">全天</span><span class="ev-dot"></span><div class="ev-body">
             <div class="ev-title">跨洋飞行 → 上海浦东<span class="en">Arrive Shanghai</span></div>
             <div class="ev-note">10月8日约 15:00 抵达上海浦东国际机场，行程结束。</div>
