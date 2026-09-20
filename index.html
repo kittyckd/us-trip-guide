@@ -298,6 +298,9 @@ footer .f-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wr
 .today-item .td-desc{font-size:12.5px;color:var(--text-2);margin-top:3px;line-height:1.55}
 a.today-item{color:inherit;text-decoration:none;cursor:pointer;transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
 a.today-item:hover{border-color:var(--brand);transform:translateY(-2px)}
+a.today-item.done{opacity:.55}
+a.today-item.done .td-num{background:#9aa0a6}
+.td-done{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:#fff;background:#2fa06b;border-radius:6px;padding:1.5px 7px;vertical-align:1px}
 @media(max-width:760px){.today-grid{grid-template-columns:1fr}}
 
 /* ===== 购票状态（仅文字提示，不含图片） ===== */
@@ -379,9 +382,9 @@ a.today-item:hover{border-color:var(--brand);transform:translateY(-2px)}
     <div class="today-grid">
       <a class="today-item" href="https://www.911memorial.org/visit/visit-museum-1" target="_blank" rel="noopener"><span class="td-num">01</span><div class="td-body"><div class="td-title">抢 9/11 博物馆免费票</div><div class="td-desc">9/28（周一）美东 7:00 开抢，限量先到先得；抢不到按 Plan B 提前入场</div></div></a>
       <a class="today-item" href="https://www.gardnermuseum.org/experience/thursday-nights" target="_blank" rel="noopener"><span class="td-num">02</span><div class="td-body"><div class="td-title">抢加德纳博物馆周四免费票</div><div class="td-desc">10/1 参观，免费票提前 2 天（9/29）开放</div></div></a>
-      <a class="today-item" href="https://www.loc.gov/visit/" target="_blank" rel="noopener"><span class="td-num">03</span><div class="td-body"><div class="td-title">预约国会图书馆 Timed-Entry</div><div class="td-desc">10/3（周六）16:00 入场，可提前 30 天预约</div></div></a>
-      <a class="today-item" href="https://airandspace.si.edu/visit/museum-dc" target="_blank" rel="noopener"><span class="td-num">04</span><div class="td-body"><div class="td-title">预约航空航天博物馆 Timed-Entry</div><div class="td-desc">10/4（周日）10:00 入场，免费但需预约</div></div></a>
-      <div class="today-item"><span class="td-num">05</span><div class="td-body"><div class="td-title">购买大都会 / MoMA / AMNH / MFA 门票</div><div class="td-desc">重要场馆建议提前官网购票，节省现场排队</div></div></div>
+      <a class="today-item done" href="https://www.loc.gov/visit/" target="_blank" rel="noopener"><span class="td-num">03</span><div class="td-body"><div class="td-title">预约国会图书馆 Timed-Entry<span class="td-done">已完成</span></div><div class="td-desc">10/3（周六）16:00 入场，可提前 30 天预约</div></div></a>
+      <a class="today-item done" href="https://airandspace.si.edu/visit/museum-dc" target="_blank" rel="noopener"><span class="td-num">04</span><div class="td-body"><div class="td-title">预约航空航天博物馆 Timed-Entry<span class="td-done">已完成</span></div><div class="td-desc">10/4（周日）10:00 入场，免费但需预约</div></div></a>
+      <div class="today-item"><span class="td-num">05</span><div class="td-body"><div class="td-title">购买大都会 / MoMA 门票</div><div class="td-desc">AMNH、MFA 已购票；Met、MoMA 建议提前官网购票</div></div></div>
       <div class="today-item"><span class="td-num">06</span><div class="td-body"><div class="td-title">确认机票与 Amtrak 车票凭证</div><div class="td-desc">国际往返 + 达美 DL5592 + NR190 / Acela，电子票截图已存入对应日期</div></div></div>
     </div>
   </div>
@@ -898,8 +901,8 @@ a.today-item:hover{border-color:var(--brand);transform:translateY(-2px)}
         <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>Amtrak NR190 / Acela 2162 车票凭证</div></span></label>
         <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>9/28 周一 7:00（美东）抢 9/11 博物馆免费票</div><div class="t-sub">限量、先到先得；抢不到按 Plan B 提前入场</div></span></label>
         <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>9/29 抢加德纳博物馆周四免费票（10/1 17:00–21:00）</div><div class="t-sub">免费票提前 2 天开放</div></span></label>
-        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>国会图书馆、航空航天博物馆 Timed-Entry 预约</div></span></label>
-        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>大都会 / MoMA / AMNH / MFA 购票</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>国会图书馆、航空航天博物馆 Timed-Entry 预约（已完成）</div></span></label>
+        <label class="todo"><input type="checkbox"><span class="box"></span><span class="t-text"><div>大都会 / MoMA 购票（AMNH / MFA 已购票）</div></span></label>
       </div>
       <div class="todo-grp">
         <h4>酒店与租车</h4>
@@ -927,7 +930,7 @@ a.today-item:hover{border-color:var(--brand);transform:translateY(-2px)}
       <div class="tip">
         <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
         <h4>免费票抢票提醒</h4>
-        <p>三个「免费/预约」窗口务必设闹钟：① 9/28 的 9/11 博物馆周一免费票（当地 7:00 抢，限量）；② 10/1 加德纳周四免费（提前 2 天开放）；③ 国会图书馆 + 航空航天博物馆的 Timed-Entry。</p>
+        <p>两个「免费票」窗口务必设闹钟：① 9/28 的 9/11 博物馆周一免费票（当地 7:00 抢，限量）；② 10/1 加德纳周四免费（提前 2 天开放）。国会图书馆、航空航天博物馆已预约，AMNH / MFA 均已购票。</p>
       </div>
       <div class="tip">
         <div class="t-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
