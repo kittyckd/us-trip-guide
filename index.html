@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <style>
 :root{
   --bg:#f6f3ee;
@@ -310,6 +311,7 @@ a.today-item.done .td-num{background:#9aa0a6}
 .route-map{height:260px;border-bottom:1px solid var(--line);position:relative;background:#e9e7e2}
 @media(min-width:760px){.route-map{height:340px}}
 .route-map .am-marker{width:26px;height:26px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;border:2.5px solid #fff;box-shadow:0 1px 5px rgba(0,0,0,.35);box-sizing:border-box;font-family:PingFang SC,Microsoft YaHei,sans-serif}
+.route-map .am-div-icon{background:none;border:none}
 </style>
 </head>
 <body>
@@ -1134,13 +1136,10 @@ tocScrim.addEventListener('click', closeToc);
 document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeToc(); });
 </script>
 
-<script>
-window._AMapSecurityConfig = { securityJsCode: "2e7f082ad2aae0269b75bbce00b8f55f" };
-</script>
-<script src="https://webapi.amap.com/maps?v=2.0&key=59d08f97f6f8841b6bbb6dfbeef6fbd2"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script>
 (function(){
-  if (!window.AMap) return;
+  if (!window.L) return;
   var dayMaps = [
     {color:"#8a909c", dash:true, stops:[
       [121.8083,31.1443,"上海浦东","PVG"],
@@ -1221,22 +1220,30 @@ window._AMapSecurityConfig = { securityJsCode: "2e7f082ad2aae0269b75bbce00b8f55f
     if (!el || el._loaded) return;
     el._loaded = true;
     var d = dayMaps[idx];
-    var map = new AMap.Map(el, { zoom: 12, center: d.stops[0].slice(0,2), showOversea: true });
-    var markers = [], path = [];
+    var map = L.map(el, { scrollWheelZoom: false, attributionControl: true });
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19,
+      attribution: '&copy; Esri &mdash; Source: Esri, HERE, Garmin, FAO, NOAA, USGS'
+    }).addTo(map);
+    var latlngs = [], bounds = L.latLngBounds([]);
     d.stops.forEach(function(s,i){
-      var pos = [s[0], s[1]];
-      var content = '<div class="am-marker" style="background:'+d.color+'">'+(i+1)+'</div>';
-      var m = new AMap.Marker({ position: pos, content: content, offset: new AMap.Pixel(-13,-13), title: s[2]+' '+s[3] });
-      markers.push(m); path.push(pos);
-      map.add(m);
+      var latlng = [s[1], s[0]];  // 元素存储为 [lng,lat]，Leaflet 需 [lat,lng]
+      latlngs.push(latlng);
+      bounds.extend(latlng);
+      var icon = L.divIcon({
+        className: 'am-div-icon',
+        html: '<div class="am-marker" style="background:'+d.color+'">'+(i+1)+'</div>',
+        iconSize: [26,26], iconAnchor: [13,13]
+      });
+      L.marker(latlng, { icon: icon, title: s[2]+' '+s[3] }).addTo(map);
     });
-    var pl = new AMap.Polyline({ path: path, strokeColor: d.color, strokeWeight: 4, strokeOpacity: 0.85, strokeStyle: d.dash?'dashed':'solid', lineJoin:'round' });
-    map.add(pl);
-    if (d.stops.length > 1) {
-      map.setFitView(markers.concat([pl]), false);
+    L.polyline(latlngs, { color: d.color, weight: 4, opacity: 0.85, dashArray: d.dash ? '8,9' : null, lineJoin: 'round' }).addTo(map);
+    if (latlngs.length > 1) {
+      map.fitBounds(bounds, { padding: [26, 26], maxZoom: 14 });
     } else {
-      map.setZoomAndCenter(14, d.stops[0].slice(0,2));
+      map.setView(latlngs[0], 14);
     }
+    setTimeout(function(){ map.invalidateSize(); }, 200);
   }
 
   function loadAll(){ for (var i=0;i<dayMaps.length;i++) initMap(i); }
