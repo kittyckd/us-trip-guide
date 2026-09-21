@@ -1221,7 +1221,7 @@ window._AMapSecurityConfig = { securityJsCode: "2e7f082ad2aae0269b75bbce00b8f55f
     if (!el || el._loaded) return;
     el._loaded = true;
     var d = dayMaps[idx];
-    var map = new AMap.Map(el, { zoom: 12, center: d.stops[0].slice(0,2) });
+    var map = new AMap.Map(el, { zoom: 12, center: d.stops[0].slice(0,2), showOversea: true });
     var markers = [], path = [];
     d.stops.forEach(function(s,i){
       var pos = [s[0], s[1]];
